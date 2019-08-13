@@ -1,6 +1,6 @@
 /*
- * @Author: huangli 
- * @Date: 2019-04-09 21:09:53 
+ * @Author: huangli
+ * @Date: 2019-04-09 21:09:53
  * @Last Modified by: huangli
  * @Last Modified time: 2019-04-21 18:57:17
  */
@@ -12,7 +12,8 @@ class CitySelectorControl {
       theme: 'light',
       placeholder: '请选择',
       // hot: ['110000', '120000', '310000', '440100', '440300', '330100', '500000', '510100', '420100']
-      hot: ['440100', '440300', '330100', '510100'],
+      // hot: ['440100', '440300', '330100', '510100'],
+      hot: ['420100', '330100', '320100'],
       zoom: 10
     }, options);
     this._onCityClick = this._onCityClick.bind(this);
@@ -48,7 +49,7 @@ class CitySelectorControl {
       for (let i = 0; i < hot.length; i++) {
         const code = hot[i];
         const city = this._getCity(code);
-        this._createNode('a', 'city-link', city.cname, hotCitysContainer, code, this._onCityClick);
+        this._createNode('a', 'city-hot-link', city.cname, hotCitysContainer, code, this._onCityClick);
       }
     }
     const provs = Citys['86'];
@@ -57,8 +58,9 @@ class CitySelectorControl {
     for (let i = 0; i < municipality.length; i++) {
       const provcode = municipality[i];
       let prov = provs[provcode];
-      this._createNode('a', 'city-link', prov.cname, mcplContainer, provcode, this._onCityClick);
+      this._createNode('a', 'city-mp-link', prov.cname, mcplContainer, provcode, this._onCityClick);
     }
+
     // 省拼音快捷索引
     let provLetterboxContainer = this._createNode('div', 'city-list city-list-lt', '', this._cityListContainer);
     for (let i = 0; i < provLetters.length; i++) {
@@ -108,7 +110,7 @@ class CitySelectorControl {
 
   /**
    * @description letter 的 click 事件
-   * @param {*} e 
+   * @param {*} e
    */
   _onLetterClick(e) {
     let l = e.target.innerText;

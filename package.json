@@ -1,6 +1,6 @@
 {
   "name": "mapbox-city-selector",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A City Selector Control for Mapbox GL JS",
   "main": "src/index.js",
   "style": "dist/style.css",

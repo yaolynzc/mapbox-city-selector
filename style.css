@@ -22,7 +22,7 @@
 .city-selector-box .city-list-box {
   position: relative;
   display: none;
-  width: 200px;
+  width: 400px;
   margin-top: 9px;
   animation: fadeIn .5s;
 }
@@ -92,6 +92,7 @@
 
 .city-selector-box .city-list-dl {
   padding-top: 6px;
+  padding-right: 8px;
 }
 
 .city-selector-box .city-list-dl dt {
@@ -117,7 +118,6 @@
 .city-selector-box .city-list-pv::-webkit-scrollbar-track {
   border-radius: 4px;
 }
-
 
 /* theme light */
 .city-selector-box.light .city-link,
@@ -174,4 +174,29 @@
 
 .city-selector-box.dark .city-list-pv::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
+}
+
+/*
+热门城市蓝色字体样式
+ */
+.city-selector-box .city-hot-link {
+  text-decoration: none;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.city-selector-box.light .city-hot-link,
+.city-selector-box.light .letter-hot-link {
+  color: #42A5F5;
+}
+
+.city-selector-box .city-mp-link {
+  text-decoration: none;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.city-selector-box.light .city-mp-link,
+.city-selector-box.light .letter-mp-link {
+  font-weight: 700;
 }
